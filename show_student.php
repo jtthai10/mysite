@@ -16,16 +16,19 @@
     <div class="container">
         <table class="table table-striped">
             <tr class="bg-primary text-white">
-                <tr>ลำดับที่</tr>
-                <tr>รหัสประจำตัว</tr>
-                <tr>ชื่อ-นามสกลุ</tr>
-                <tr>เบอร์โทรศัพท์</tr>
-                <tr>อีเมล</tr>
+                <th>ลำดับที่</th>
+                <th>รหัสประจำตัว</th>
+                <th>ชื่อ-นามสกลุ</th>
+                <th>เบอร์โทรศัพท์</th>
+                <th>อีเมล</th>
             </tr>
             <tr>
                 <?php
                     $row=mysqli_connect_fetch_array($result);
                 ?>
+            </tr>
+            <tr>
+            
             </tr>
         </table>
     </div>
