@@ -24,12 +24,22 @@
             </tr>
             <tr>
                 <?php
-                    $row=mysqli_connect_fetch_array($result);
+                    while($row=mysqli_fetch_array($result)){
+
+                    
                 ?>
             </tr>
             <tr>
-            
+                <td><?php echo$i; ?></td>
+                <td><?php echo $row['std_id']?></td>
+                <td><?php echo $row['std_name']?></td>
+                <td><?php echo $row['std_tel']?></td>
+                <td><?php echo $row['std_email']?></td>
             </tr>
+            <?php
+                $i++;
+            }
+         ?>
         </table>
     </div>
 </body>

@@ -1,12 +1,10 @@
 <?php
-//add_student.php
 if (isset($_POST['submit'])){
 require_once 'config.php';
-$std_id=$_POST['std_id'];
 $std_name=$_POST['std_name'];
 $std_tel=$_POST['std_tel'];
 $std_email=$_POST['std_email'];
-if($std_id==''|| $std_name==''|| $std_tel==''||$std_email==''){
+if($std_name==''|| $std_tel==''|| $std_email==''){
     echo "<script>alert('คุณยังไม่กรอกข้อมูล')</script>";
 }else{
 $sql="INSERT INTO student VALUES('$std_id','$std_name','$std_tel','$std_email')";
@@ -14,7 +12,9 @@ $con->query($sql);
 if(!$con){
     echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
 }else{
-    echo "<script>alert('เพิ่มข้อมูลสำเร็จ')</script>";
+    echo "<script>
+            window.location.href='show_student.php';
+            </script>";
         }
     }
 }
