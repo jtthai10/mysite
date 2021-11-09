@@ -36,8 +36,8 @@ if(!$con){
    <div class="container mt-5 w-25">
    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="mb-3 row">
-            <label for="" class="form_label">รหัสวิชา</label>
-                <input type="text" class="form-control" name="sub_id" placeholder="sub_id">
+            <label for="" class="form_label">ชื่อ-นามสกลุ</label>
+                <input type="text" class="form-control" name="std_name" placeholder="ชื่อ-นามสกุล">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">ชื่อวิชา</label>
