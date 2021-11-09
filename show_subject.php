@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="container">
+        <a href="add_subject.php" class="btn btn-primary">
+            +เพิ่มข้อมูลรายวิชา
+        </a>
+        <br><br>
         <table class="table table-striped">
             <tr class="bg-primary text-white">
                 <th class="text-white">ลำดับที่</th>

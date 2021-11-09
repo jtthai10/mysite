@@ -15,13 +15,17 @@
 </head>
 <body>
     <div class="container">
+    <a href="add_student.php" class="btn btn-primary">
+            +เพิ่มข้อมูลรายวิชา
+        </a>
+        <br><br>
         <table class="table table-striped">
             <tr class="bg-primary text-white">
-                <th>ลำดับที่</th>
-                <th>รหัสประจำตัว</th>
-                <th>ชื่อ-นามสกลุ</th>
-                <th>เบอร์โทรศัพท์</th>
-                <th>อีเมล</th>
+                <th class="text-white">ลำดับที่</th>
+                <th class="text-white">รหัสประจำตัว</th>
+                <th class="text-white">ชื่อ-นามสกลุ</th>
+                <th class="text-white">เบอร์โทรศัพท์</th>
+                <th class="text-white">อีเมล</th>
             </tr>
             <tr>
                 <?php
