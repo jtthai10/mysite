@@ -42,7 +42,7 @@ if(!$con){
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">อีเมล</label>
-                <input type="text" class="form-control" name="std_mail" placeholder="อีเมล">
+                <input type="text" class="form-control" name="std_email" placeholder="อีเมล">
         <div class="mb-3 row">
             <label for="" class="form_label"></label>
                 <input type="submit" class="btn btn-primary" name="submit" value="เพิ่มข้อมูล">

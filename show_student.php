@@ -24,9 +24,8 @@
             </tr>
             <tr>
                 <?php
-                    while($row=mysqli_fetch_array($result)){
-
-                    
+                    $i=1;
+                    while($row=mysqli_fetch_array($result)){  
                 ?>
             </tr>
             <tr>
