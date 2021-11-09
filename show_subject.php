@@ -1,7 +1,7 @@
 <?php 
     include 'navbar.php';
     require_once 'config.php';
-    $sql="SELECT * FROM student";
+    $sql="SELECT * FROM subject";
     $result=$con->query($sql);
 ?>
 <!DOCTYPE html>
@@ -17,11 +17,13 @@
     <div class="container">
         <table class="table table-striped">
             <tr class="bg-primary text-white">
-                <th>ลำดับที่</th>
-                <th>รหัสประจำตัว</th>
-                <th>ชื่อ-นามสกลุ</th>
-                <th>เบอร์โทรศัพท์</th>
-                <th>อีเมล</th>
+                <th class="text-white">ลำดับที่</th>
+                <th class="text-white">รหัสวิชา</th>
+                <th class="text-white">ชื่อวิชา</th>
+                <th class="text-white">ชัวโมงทฤษฏี</th>
+                <th class="text-white">ชัวโมงปฏิบัติ</th>
+                <th class="text-white">หน่วยกิต</th>
+                <th class="text-white">ครูผู้สอน</th>
             </tr>
             <tr>
                 <?php
@@ -31,10 +33,13 @@
             </tr>
             <tr>
                 <td><?php echo$i; ?></td>
-                <td><?php echo $row['std_id']?></td>
-                <td><?php echo $row['std_name']?></td>
-                <td><?php echo $row['std_tel']?></td>
-                <td><?php echo $row['std_email']?></td>
+                <td><?php echo $row['sub_id']?></td>
+                <td><?php echo $row['sub_name']?></td>
+                <td><?php echo $row['t_hour']?></td>
+                <td><?php echo $row['p_hour']?></td>
+                <td><?php echo $row['credit']?></td>
+                <td><?php echo $row['teacher']?></td>
+
             </tr>
             <?php
                 $i++;

@@ -1,4 +1,5 @@
 <?php
+include 'navbar.php';
 if (isset($_POST['submit'])){
 require_once 'config.php';
 $sub_id=$_POST['sub_id'];
