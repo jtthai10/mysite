@@ -28,6 +28,7 @@
                 <th class="text-white">ชัวโมงปฏิบัติ</th>
                 <th class="text-white">หน่วยกิต</th>
                 <th class="text-white">ครูผู้สอน</th>
+                <th class="text-white">การจัดการ</th>
             </tr>
             <tr>
                 <?php
@@ -43,6 +44,10 @@
                 <td><?php echo $row['p_hour']?></td>
                 <td><?php echo $row['credit']?></td>
                 <td><?php echo $row['teacher']?></td>
+                <td>
+                    <a href="edit_subject.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-success">แกัไข</a>
+                    <a href="del_subject.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-danger" onclick="return confirm('จะลบข้อมูลหรือไม่')">ลบ</a>
+                </td>
 
             </tr>
             <?php

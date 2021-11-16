@@ -26,6 +26,8 @@
                 <th class="text-white">ชื่อ-นามสกลุ</th>
                 <th class="text-white">เบอร์โทรศัพท์</th>
                 <th class="text-white">อีเมล</th>
+                <th class="text-white">การจัดการ</th>
+                
             </tr>
             <tr>
                 <?php
@@ -39,6 +41,10 @@
                 <td><?php echo $row['std_name']?></td>
                 <td><?php echo $row['std_tel']?></td>
                 <td><?php echo $row['std_email']?></td>
+                <td>
+                    <a href="edit_std.php?std_id=<?php echo $row['std_id'] ?>" class="btn btn-success">แกัไข</a>
+                    <a href="del_std.php?std_id=<?php echo $row['std_id'] ?>" class="btn btn-danger" onclick="return confirm('จะลบข้อมูลหรือไม่')">ลบ</a>
+                </td>
             </tr>
             <?php
                 $i++;
