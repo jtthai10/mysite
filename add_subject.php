@@ -1,7 +1,8 @@
 <?php
+//add_student.php
 include 'navbar.php';
 if (isset($_POST['submit'])){
-require_once 'config.php';
+require_once 'confix.php';
 $sub_id=$_POST['sub_id'];
 $sub_name=$_POST['sub_name'];
 $t_hour=$_POST['t_hour'];
@@ -36,27 +37,27 @@ if(!$con){
    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="mb-3 row">
             <label for="" class="form_label">รหัสวิชา</label>
-                <input type="text" class="form-control" name="sub_id" placeholder="รหัสวิชา">
+                <input type="text" class="form-control" name="sub_id" placeholder="sub_id">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">ชื่อวิชา</label>
-                <input type="text" class="form-control" name="sub_name" placeholder="ชื่อวิชา">
+                <input type="text" class="form-control" name="sub_name" placeholder="sub_name">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">ชม.ทฤษฎี</label>
-                <input type="text" class="form-control" name="t_hour" placeholder="ชัวโมงทฤษฏี">
+                <input type="text" class="form-control" name="t_hour" placeholder="t_hour">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">ชม.ปฏิบัติ</label>
-                <input type="text" class="form-control" name="p_hour" placeholder="ชัวโมงปฏิบัติ">
+                <input type="text" class="form-control" name="p_hour" placeholder="p_hour">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">หน่วยกิต</label>
-                <input type="text" class="form-control" name="credit" placeholder="หน่วยกิต">
+                <input type="text" class="form-control" name="credit" placeholder="credit">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label">ชื่อครูผู้สอน</label>
-                <input type="text" class="form-control" name="teacher" placeholder="ชื่อครูผู้สอน">
+                <input type="text" class="form-control" name="teacher" placeholder="teacher">
         </div>
         <div class="mb-3 row">
             <label for="" class="form_label"></label>

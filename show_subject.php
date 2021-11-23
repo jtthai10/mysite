@@ -1,9 +1,10 @@
-<?php 
-    include 'navbar.php';
-    require_once 'config.php';
-    $sql="SELECT * FROM subject";
-    $result=$con->query($sql);
+<?php
+include 'navbar.php';
+require_once 'config.php';
+$sql="SELECT * FROM subject";
+$result=$con->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,46 +15,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <a href="add_subject.php" class="btn btn-primary">
-            +เพิ่มข้อมูลรายวิชา
-        </a>
-        <br><br>
+    <div class="container mt-5">
+        <a href="add_subject.php" class="btn btn-primary">+เพิ่มข้อมูลรายวิชา</a><br></br>
         <table class="table table-striped">
-            <tr class="bg-primary text-white">
+            <tr class="bg-primary">
                 <th class="text-white">ลำดับที่</th>
                 <th class="text-white">รหัสวิชา</th>
                 <th class="text-white">ชื่อวิชา</th>
-                <th class="text-white">ชัวโมงทฤษฏี</th>
-                <th class="text-white">ชัวโมงปฏิบัติ</th>
+                <th class="text-white">ทฤษฎี</th>
+                <th class="text-white">ปฏิบัติ</th>
                 <th class="text-white">หน่วยกิต</th>
                 <th class="text-white">ครูผู้สอน</th>
                 <th class="text-white">การจัดการ</th>
-            </tr>
-            <tr>
-                <?php
-                    $i=1;
-                    while($row=mysqli_fetch_array($result)){  
-                ?>
-            </tr>
-            <tr>
-                <td><?php echo$i; ?></td>
-                <td><?php echo $row['sub_id']?></td>
-                <td><?php echo $row['sub_name']?></td>
-                <td><?php echo $row['t_hour']?></td>
-                <td><?php echo $row['p_hour']?></td>
-                <td><?php echo $row['credit']?></td>
-                <td><?php echo $row['teacher']?></td>
-                <td>
-                    <a href="edit_subject.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-success">แกัไข</a>
-                    <a href="del_subject.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-danger" onclick="return confirm('จะลบข้อมูลหรือไม่')">ลบ</a>
-                </td>
+
 
             </tr>
-            <?php
+            
+                <?php
+                $i=1;
+                while($row=mysqli_fetch_array($result)){
+                ?>
+                <tr>
+                    <td><?php echo $i; ?></td>
+                    <td><?php echo $row['sub_id']?></td>
+                    <td><?php echo $row['sub_name']?></td>
+                    <td><?php echo $row['t_hour']?></td>
+                    <td><?php echo $row['p_hour']?></td>
+                    <td><?php echo $row['credit']?></td>
+                    <td><?php echo $row['teacher']?></td>
+                    <td>
+                    <a href="edit_sub.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-success">แก้ไข</a>
+                    <a href="del_sub.php?sub_id=<?php echo $row['sub_id'] ?>" class="btn btn-danger" onclick="return confirm('แน่ใจหรือไม่ที่จะลบข้อมูล?')">ลบ</a>
+                </td>
+                </tr>
+                <?php
                 $i++;
-            }
-         ?>
+                }
+                ?>
         </table>
     </div>
 </body>

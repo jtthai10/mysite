@@ -1,21 +1,23 @@
 <?php
+//add_student.php
 include 'navbar.php';
 if (isset($_POST['submit'])){
-require_once 'config.php';
+require_once 'confix.php';
 $std_name=$_POST['std_name'];
 $std_tel=$_POST['std_tel'];
 $std_email=$_POST['std_email'];
 if($std_name==''|| $std_tel==''|| $std_email==''){
     echo "<script>alert('คุณยังไม่กรอกข้อมูล')</script>";
 }else{
-$sql="INSERT INTO student VALUES('$std_id','$std_name','$std_tel','$std_email')";
+$sql="INSERT INTO student VALUES('','$std_name','$std_tel','$std_email')";
 $con->query($sql);
 if(!$con){
     echo "<script>alert('ไม่สามารถเพิ่มข้อมูลได้')</script>";
 }else{
     echo "<script>
-            window.location.href='show_student.php';
-            </script>";
+        alert('เพิ่มข้อมูลสำเร็จ')
+        window.location.href='show_student.php';
+        </script>";
         }
     }
 }
@@ -34,19 +36,28 @@ if(!$con){
    <div class="container mt-5 w-25">
    <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="mb-3 row">
-            <label for="" class="form_label">ชื่อ-นามสกลุ</label>
-                <input type="text" class="form-control" name="std_name" placeholder="ชื่อ-นามสกุล">
+            <label for="" class="col-form-label col-sm-4">ชื่อ-นามสกุล</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="std_name">
+            </div>
         </div>
         <div class="mb-3 row">
-            <label for="" class="form_label">เบอร์โทรศัพท์</label>
-                <input type="text" class="form-control" name="std_tel" placeholder="เบอร์โทรศัพท์">
+            <label for="" class="col-form-label col-sm-4">เบอร์โทรศัพท์</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" name="std_tel">
+            </div>
         </div>
         <div class="mb-3 row">
-            <label for="" class="form_label">อีเมล</label>
-                <input type="text" class="form-control" name="std_email" placeholder="อีเมล">
+            <label for="" class="col-form-label col-sm-4">Email</label>
+            <div class="col-sm-8">
+                <input type="email" class="form-control" name="std_email">
+            </div>
+        </div>
         <div class="mb-3 row">
-            <label for="" class="form_label"></label>
+            <label for="" class="col-form-label col-sm-4"></label>
+            <div class="col-sm-8">
                 <input type="submit" class="btn btn-primary" name="submit" value="เพิ่มข้อมูล">
+            </div>
         </div>
 </form>   
 </div> 

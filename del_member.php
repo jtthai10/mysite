@@ -1,11 +1,11 @@
 <?php
     require_once 'config.php';
-    $std_id=$_GET['std_id'];
-    $sql="DELETE FROM student WHERE std_id='$std_id'";
+    $selected_username=$_GET['username'];
+    $sql="DELETE FROM member WHERE username='$selected_username'";
     $result=$con->query($sql);
     if(!$result){
         echo "<script>alert('ลบข้อมูลไม่สำเร็จ')</script>";
     }else{
-        echo "<script>window.location.href='show_student.php'</script>";
+        echo "<script>window.location.href='show_member.php'</script>";
     }
 ?>

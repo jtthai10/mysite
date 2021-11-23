@@ -1,17 +1,17 @@
 <?php
-    //mainhost
+ /*   //mainhost
     $host="localhost";
     $user="planetco_64309010034";
     $password="64309010034";
     $dbname="planetco_64309010034";
+*/
 
-/*
     //testhost
     $host="localhost";
     $user="root";
     $password="";
     $dbname="mysite";
-*/
+
 
 
     $con=mysqli_connect($host,$user,$password,$dbname);
